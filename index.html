@@ -6,30 +6,30 @@
   </head>
   <body>
   	<header>
-		<div class="container">
-		  	<div class="logo">
-		  		<img src="http://placehold.it/154x64" alt="Логотип" width="154px" height="64px">
-		  	</div>
-		  	<div class="main-menu">
-		  		<ul>
-			  		<li><a href="#">Каталог</a></li>
-			  		<li><a href="#">Доставка и оплата</a></li>
-			  		<li><a href="#">О компании</a></li>
-			  	</ul>
-		  	</div>
-		  	<div class="user">
-		  		<a href="#">Поиск</a>
-		  		<a href="#">Вход</a>
-		  		<a href="#">Пусто</a>
-		  	</div>
-		</div>
+  		<div class="container">
+  		  <div class="logo">
+  		  	<img src="http://placehold.it/154x64" alt="Логотип" width="154px" height="64px">
+  		  </div>
+  		  <div class="main-menu">
+  		  	<ul>
+  			  	<li><a href="#">Каталог</a></li>
+  			  	<li><a href="#">Доставка и оплата</a></li>
+  			  	<li><a href="#">О компании</a></li>
+  			  </ul>
+  		  </div>
+  		  <div class="user">
+  		  	<a href="#" class="search">Поиск</a>
+  		  	<a href="#" class="enter">Вход</a>
+  		  	<a href="#" class="basket">Пусто</a>
+  		  </div>
+         <div class="contacts">
+          <p>
+            С 10 до 20, ежедневно<br>
+            8 812 450-25-25
+          </p>
+        </div>
+  		</div>
   	</header>
-  	<div class="contacts">
-  		<p>
-			С 10 до 20, ежедневно<br>
-			8 812 450-25-25
-		</p>
-	</div>
   	<div class="container">
   		<div class="slider">
 	  		<div class="row">
@@ -49,12 +49,12 @@
   		</div>
   		<div class="stock">
   			<div class="row">
-  				<div class="col-2">  				
+  				<div class="col-2 stock-item">  				
   					<h2>Малинка даром!</h2>
   					<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
   					<a href="#" class="btn">Хочу варенье!</a>
   				</div>
-  				<div class="col-2">
+  				<div class="col-2 stock-item">
   					<h2>Шоколадки даром!</h2>
   					<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
   					<a href="#" class="btn">Хочу шоколадки!</a>
@@ -63,26 +63,34 @@
   		</div>
   		<div class="catalog">
   			<div class="row">
-  				<div class="col-1">
-  					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
-  					<p class="price">310 /кг</p>
-  					<p class="name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
-  				</div>
-  				<div class="col-1">
-  					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
-  					<p class="price">380 /кг</p>
-  					<p class="name">Сливочно-кофейное с кусочками шоколада</p>
-  				</div>
-  				<div class="col-1">
-  					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
-  					<p class="price">355 /кг</p>
-  					<p class="name">Сливочно-клубничное с присыпкой из белого шоколада</p>
-  				</div>
-  				<div class="col-1">
-  					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
-  					<p class="price">415 /кг</p>
-  					<p class="name">Сливочное крем-брюле с карамельной подливкой</p>
-  				</div>
+          <a href="#">
+    				<div class="col-1 catalog-item">
+    					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
+    					<p class="price">310 /кг</p>
+    					<p class="name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+    				</div>
+          </a>
+          <a href="#">
+    				<div class="col-1 catalog-item">
+    					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
+    					<p class="price">380 /кг</p>
+    					<p class="name">Сливочно-кофейное с кусочками шоколада</p>
+    				</div>
+          </a>
+          <a href="#">
+    				<div class="col-1 catalog-item">
+    					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
+    					<p class="price">355 /кг</p>
+    					<p class="name">Сливочно-клубничное с присыпкой из белого шоколада</p>
+    				</div>
+          </a>
+          <a href="#">
+    				<div class="col-1 catalog-item">
+    					<img src="http://placehold.it/200x200" alt="Изображение товара" width="200px" height="200px">
+    					<p class="price">415 /кг</p>
+    					<p class="name">Сливочное крем-брюле с карамельной подливкой</p>
+    				</div>
+          </a>
   			</div>
   		</div>
   		<div class="info">
@@ -100,7 +108,7 @@
   			<div class="row">
   				<div class="col-2 news">
   					<p>Новое в нашем блоге</p>
-  					<h3>10  способов сервировки фруктовых щербетов к столу</h3>
+  					<a href="#">10  способов сервировки фруктовых щербетов к столу</a>
   				</div>
   				<div class="col-2 delivery">
   					<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
@@ -114,35 +122,25 @@
   	</div>
   	<div class="map">
   		<div class="address">
-  			<p>
-  				Адрес главного офиса<br>
-  				и офлайн магазина:
-  			</p>
-  			<p>
-  				<b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b>
-  			</p>
-  			<p>
-  				Для заказов по телефону:
-  			</p>
-  			<p>
-  				<b>8 812 450-25-25</b><br>
-  				(с 10 до 20 ежедневно)
-
-  			</p>
+  			<p>Адрес главного офиса<br>и офлайн магазина:</p>
+  			<p class="bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
+  			<p>Для заказов по телефону:</p>
+  			<p class="bold">8 812 450-25-25</p>
+        <p>(с 10 до 20 ежедневно)</p>
   			<a href="#" class="btn">Форма обратной связи</a>
   		</div>
   	</div>
 	<footer>
 		<div class="container">
   			<div class="social">
-  				<img src="http://placehold.it/40x40" alt="Twitter" width="40px" height="40px">
-  				<img src="http://placehold.it/40x40" alt="Instagram" width="40px" height="40px">
-  				<img src="http://placehold.it/40x40" alt="Facebook" width="40px" height="40px">
-  				<img src="http://placehold.it/40x40" alt="Vkontakte" width="40px" height="40px">
+  				<a href="#"><img src="http://placehold.it/40x40" alt="Twitter" width="40px" height="40px"></a>
+  				<a href="#"><img src="http://placehold.it/40x40" alt="Instagram" width="40px" height="40px"></a>
+  				<a href="#"><img src="http://placehold.it/40x40" alt="Facebook" width="40px" height="40px"></a>
+  				<a href="#"><img src="http://placehold.it/40x40" alt="Vkontakte" width="40px" height="40px"></a>
   			</div>
 			<div class="footer-navigation">
   				<ul>
-  					<li><a href="#">Для поставщиков</a></li>
+  					<li class="heart"><a href="#">Для поставщиков</a></li>
   					<li><a href="#">О производстве</a></li>
   					<li><a href="#">Наши документы</a></li>
   					<li><a href="#">Экологические стандарты</a></li>
