@@ -35,12 +35,11 @@ h3 {
 	/*padding: 0 27.6px;*/
 	box-sizing: border-box;
 }
-.row {
+.row::after {
 	content: "";
 	display: table;
 	clear: both;
-}
-.row::after {
+
 	margin-right: 0;
 }
 .col-4 {
@@ -120,6 +119,7 @@ header::after {
 	display: table;
 	clear: both;
 }
+
 .catalog-item {
 	float: left;
 	margin-bottom: 40px;
@@ -129,6 +129,11 @@ header::after {
 }
 .catalog-item img {
 	border-radius: 50%;
+}
+.catalog-item p img {
+	border-radius: 0;
+	position: relative;
+	top: 3px;
 }
 .price {
 	font-size: 45px;
@@ -249,4 +254,9 @@ footer {
 	float: right;
 	padding-top: 19px;
 	padding-bottom: 25px;
+}
+.catalog-caption {
+	text-align: left;
+	font-size: 35px;
+	line-height: 41px;
 }
