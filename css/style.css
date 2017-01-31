@@ -1,3 +1,12 @@
+body, p, ul, h2 {
+	margin: 0;
+	padding: 0;
+}
+a {
+	text-decoration: none;
+	color: inherit;
+}
+/*-----------------------------------*/
 body {
 	font-size: 16px;
 	line-height: 22px;
@@ -20,6 +29,7 @@ h2 {
 	color: #ffffff;
 	font-weight: bold;
 	font-family: Roboto, sans-serif;
+	padding-bottom: 28px;
 }
 h3 {
 	font-size: 24px;
@@ -30,11 +40,13 @@ h3 {
 	margin: 0;
 }
 .container {
+	outline: 1px solid red;
 	width: 1200px;
 	margin: 0 auto;
-	/*padding: 0 27.6px;*/
+	padding: 0 27.6px;
 	box-sizing: border-box;
 }
+/*
 .row::after {
 	content: "";
 	display: table;
@@ -53,47 +65,33 @@ h3 {
 	width: 266.4px;
 	margin-right: 26.4px;
 }
-a {
-	text-decoration: none;
-	color: inherit;
-}
-p, ul {
-	margin: 0;
-	padding: 0;
+*/
+.main-header {
+	display: flex;
 }
 .logo {
-	float: left;
-	margin-right: 22px;
+	margin-top: 9px;
 }
 .main-menu {
-	float: left;
-	padding-top: 16px;
+	margin-top: 26px;
 }
 .main-menu li {
 	display: inline-block;
-	padding-right: 28px;
-}
-.main-menu li:last-child {
-	padding-right: 0px;
+	margin-left: 26px;
+	border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 .user {
-	float: right;
-	padding-top: 16px;
+	margin-left: 420px;
+	margin-top: 26px;
+}
+.user a {
+	padding: 0 10px;
 }
 .contacts {
-	float: right;
-	clear: both;
-}
-header::after {
-	content: "";
-	display: table;
-	clear: both;
+	text-align: right;
 }
 .breadcrumbs li {
 	display: inline-block;
-}
-.slider .switch {
-	float: left;
 }
 .slider a {
 	display: block;
@@ -102,11 +100,19 @@ header::after {
 	text-align: center;
 	margin-bottom: 40px;
 }
+.stock {
+	display: flex;
+	justify-content: space-between;
+}
 .stock-item {
-	float: left;
+	width: 560px;
 	margin-bottom: 40px;
-	padding: 0 10px;
+	padding: 20px;
 	box-sizing: border-box;
+	border-radius: 20px;
+}
+.stock-item p {
+	padding-bottom: 50px;
 }
 .stock-item:first-child {
 	background-color: #980119;
@@ -114,18 +120,13 @@ header::after {
 .stock-item:last-child {
 	background-color: #6a422f;
 }
-.stock:after {
-	content: "";
-	display: table;
-	clear: both;
-}
-
-.catalog-item {
-	float: left;
+.catalog {
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 40px;
 }
-.catalog-item:last-child {
-	margin-right: 0px;
+.catalog-item {
+	width: 267px;
 }
 .catalog-item img {
 	border-radius: 50%;
@@ -148,12 +149,10 @@ header::after {
 	padding: 0 10px;
 	margin-top: 25px;
 }
-.catalog:after {
-	content: "";
-	display: table;
-	clear: both;
-}
 .info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 	background-color: #ede0c3;
 	border-radius: 15px;
 	padding: 30px 20px;
@@ -162,33 +161,31 @@ header::after {
 .info p {
 	color: #323232;
 	width: 475px;
+	padding-top: 15px;
 }
 .icon-icecream {
-	float: left;
+	
 }
 .icon-sheet {
-	float: left;
+	
 }
 .icon-cow {
-	float: left;
+	
 }
 .icon-thermometer {
-	float: left;
-}
-.info:after {
-	content: "";
-	display: table;
-	clear: both;
+	
 }
 .other {
+	display: flex;
+	justify-content: space-between;
 	margin-bottom: 40px;
 }
 .news {
+	width: 560px;
 	height: 220px;
 	background-color: #ffffff;
 	border-radius: 15px;
 	color: #323232;
-	float: left;
 	padding-top: 26px;
 	padding-left: 20px;
 	box-sizing: border-box;
@@ -197,11 +194,11 @@ header::after {
 	text-decoration: underline;
 }
 .delivery {
+	width: 560px;
 	height: 220px;
 	background-color: #f8f7f4;
 	border-radius: 15px;
 	color: #5a5a5a;
-	float: left;
 	padding: 40px 28px;
 	box-sizing: border-box;
 }
@@ -217,46 +214,43 @@ header::after {
 	border-radius: 15px;
 	padding: 34px 27px;
 	box-sizing: border-box;
-	float: right;
 }
-.pagination {
-	float: right;
-}
-.pagination li {
-	display: inline-block;
-}
-footer::before {
-	content: "";
-	display: table;
-	clear: both;
-}
-footer {
+.main-footer {
+	display: flex;
 	font-size: 13px;
 	line-height: 18px;
 	font-weight: normal;
 }
 .social {
-	float: left;
-	margin-right: 217px;
 	padding-top: 36px;
 	padding-bottom: 29px;
 }
+.social a {
+	padding-right: 11px;
+}
 .footer-navigation {
-	float: left;
 	padding-top: 36px;
 	padding-bottom: 29px;
+	margin-left: 200px;/*----------------- пересчитать ------------------*/
+	margin-right: 200px;/*----------------- пересчитать ------------------*/
 }
 .footer-navigation ul {
 	list-style: none;
   	column-count: 2;
 }
 .design {
-	float: right;
 	padding-top: 19px;
 	padding-bottom: 25px;
 }
+/*----------------- catalog ------------------*/
 .catalog-caption {
 	text-align: left;
 	font-size: 35px;
 	line-height: 41px;
+}
+.pagination {
+	float: right;
+}
+.pagination li {
+	display: inline-block;
 }
