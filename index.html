@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>GllacyShop</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&amp;subset=cyrillic" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
@@ -27,7 +29,7 @@
       <div class="contacts">
         <p>
           С 10 до 20, ежедневно<br>
-          8 812 450-25-25
+          <span class="phone">8 812 450-25-25</span>
          </p>
       </div>
     </div>
@@ -45,12 +47,12 @@
 		  	<a href="#" class="btn">Давайте оба!</a>
   		</div>
   		<div class="stock">
-  			<div class="stock-item">  				
+  			<div class="stock-item raspberry">  				
   				<h2>Малинка даром!</h2>
   				<p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
   				<a href="#" class="btn">Хочу варенье!</a>
   			</div>
-  			<div class="stock-item">
+  			<div class="stock-item chocolate">
   				<h2>Шоколадки даром!</h2>
   				<p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
   				<a href="#" class="btn">Хочу шоколадки!</a>
@@ -59,30 +61,34 @@
   		<div class="catalog">
     		<div class="catalog-item">
           <a href="#">
+            <img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
       			<img src="img/IceCream_item_1.jpg" alt="Изображение товара" width="267px" height="267px">
       			<p class="price"><span>310</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
-      			<p class="name">Сливочное с апельсиновым джемом и цитрусовой стружкой</p>
+      			<p class="name"><a href ="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></p>
           </a>
     		</div>
     		<div class="catalog-item">
           <a href="#">
+            <img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
       			<img src="img/IceCream_item_2.jpg" alt="Изображение товара" width="267px" height="267px">
       			<p class="price"><span>380</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
-      			<p class="name">Сливочно-кофейное с кусочками шоколада</p>
+      			<p class="name"><a href ="#">Сливочно-кофейное с кусочками шоколада</a></p>
       		</a>
         </div>
     		<div class="catalog-item">
           <a href="#">
-      			<img src="img/IceCream_item_3.jpg" alt="Изображение товара" width="267px" height="267px">
+      			<img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
+            <img src="img/IceCream_item_3.jpg" alt="Изображение товара" width="267px" height="267px">
       			<p class="price"><span>355</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
-      			<p class="name">Сливочно-клубничное с присыпкой из белого шоколада</p>
+      			<p class="name"><a href ="#">Сливочно-клубничное с присыпкой из белого шоколада</a></p>
       		</a>
         </div>
     		<div class="catalog-item">
           <a href="#">
-      			<img src="img/IceCream_item_4.jpg" alt="Изображение товара" width="267px" height="267px">
+      			<img class="hit" src="img/HIT.png" alt="Хит" width="61px" height="61px">
+            <img src="img/IceCream_item_4.jpg" alt="Изображение товара" width="267px" height="267px">
       			<p class="price"><span>415</span><img src="img/P.png" alt="Р" width="31px" height="36px"><span>/кг</span></p>
-      			<p class="name">Сливочное крем-брюле с карамельной подливкой</p>
+      			<p class="name"><a href ="#">Сливочное крем-брюле с карамельной подливкой</a></p>
       		</a>
         </div>
   		</div>
@@ -99,12 +105,14 @@
   				<h3><a href="#">10  способов сервировки<br>фруктовых щербетов к<br>столу</a></h3>
   			</div>
   			<div class="delivery">
-  				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-  				<form method="post">
-  					<input type="text" name="delivery" placeholder="Электронная почта">
-  					<button class="btn">Отправить</button>
-  				</form>
-  			</div>
+          <div class="delivery-background">
+    				<p>Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+    				<form method="post">
+    					<input type="text" name="delivery" placeholder="Электронная почта">
+    					<button class="btn">Отправить</button>
+    				</form>
+    			</div>
+        </div>
   		</div>
   	</div>
   	<div class="map">
@@ -135,7 +143,7 @@
   			</div>
   			<div class="design">
   				<img src="img/Logo_HTMLAcademy.png" alt="HTMLAcademy" width="108px" height="38px">
-  				<p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy ©</a> 2017</p>
+  				<p>Сделано в <a href="https://htmlacademy.ru/">HTML Academy</a> © 2017</p>
   			</div>	
   		</div>	
   	</footer>
