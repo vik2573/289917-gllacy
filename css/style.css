@@ -42,12 +42,15 @@ h3 {
 }
 .main-header {
 	display: flex;
+	justify-content: flex-start;
 }
 .logo {
 	margin-top: 9px;
 }
 .main-menu {
 	margin-top: 26px;
+	width: 710px;
+	float: left;
 }
 .main-menu ul {
 	margin: 0;
@@ -59,38 +62,47 @@ h3 {
 	border-bottom: 1px solid rgba(255,255,255,0.2);
 }
 .user {
-	margin-left: 358px;
-	margin-top: 26px;
+	font-size: 14px;
+	line-height: 16px;
+	margin-top: 31px;
+	margin-left: 26px;
 }
 .user a {
-	padding: 0 15px;
+	margin-left: 10px;
+	}
+.user a:first-child {
+	margin-left: 0;
 }
-/*.search {
+.search {
 	position: relative;
-	font-size: 0;
 	background-color: rgba(255,255,255,0.3);
 	border-radius: 50%;
+	font-size: 0;
+	padding: 16px;
+	top: -5px;
 }
 .search::before {
 	content: "";
 	position: absolute;
-	top: -13px;
-	left: 0;
+	top: 8px;
+	left: 1px;
 	width: 21px;
 	height: 20px;
 	background: url(../img/Sprite_User.png) no-repeat;
 	background-position: -50px -15px;
+
 }
 .enter {
 	position: relative;
+	padding: 7px 14px 7px 43px;
 	background-color: rgba(255,255,255,0.3);
-	border-radius: 20%;
+	border-radius: 20px;
 }
 .enter::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 5px;
+	top: 6px;
+	left: 15px;
 	width: 21px;
 	height: 20px;
 	background: url(../img/Sprite_User.png) no-repeat;
@@ -98,31 +110,114 @@ h3 {
 }
 .basket {
 	position: relative;
+	padding: 7px 35px 7px 40px;
 	background-color: rgba(255,255,255,0.3);
-	border-radius: 20%;
+	border-radius: 20px;
 }
 .basket::before {
 	content: "";
 	position: absolute;
-	top: 0;
-	left: 5px;
+	top: 6px;
+	left: 16px;
 	width: 21px;
 	height: 20px;
 	background: url(../img/Sprite_User.png) no-repeat;
 	background-position: -97px -15px;
-}*/
+}
 .contacts {
 	text-align: right;
 }
 .contacts p {
 	margin: 0;
 
+	margin-top: -6px;
 	font-size: 14px;
 	line-height: 16px;
 }
-.contacts span {
+.phone {
 	font-size: 22px;
 	line-height: 24px;
+	display: block;
+	margin-top: 4px;
+}
+.wrapper::before,
+.wrapper::after {
+	content: "";
+	visibility: hidden;
+}
+.wrapper::before,
+.wrapper::after {
+	background-image: url(../img/IceCream_2.png);
+}
+.wrapper::after {
+	background-image: url(../img/IceCream_3.png);
+}
+.wrapper {
+	background: #849d8f url(../img/IceCream_1.png) no-repeat;
+	background-position: top center;
+	transition: background-image 0.5s ease,
+				background-color 0.5s ease;
+}
+.slider {
+	position: relative;
+}
+.slider h1 {
+	margin: 0;
+
+	padding-top: 270px;
+	margin-bottom: 30px;
+}
+.slider a {
+	display: block;
+	width: 280px;
+	margin: 0 auto;
+	text-align: center;
+	margin-bottom: 40px;
+	text-shadow: 2px 2px 5px rgba(160,32,11,0.76);
+}
+.slide {
+	display: none;
+}
+body > input[type="radio"] {
+	display: none;
+}
+#switch_1:checked ~ .wrapper #slide_1,
+#switch_2:checked ~ .wrapper #slide_2,
+#switch_3:checked ~ .wrapper #slide_3 {
+	display: block;
+}
+#switch_1:checked ~ .wrapper label[for="switch_1"],
+#switch_2:checked ~ .wrapper label[for="switch_2"],
+#switch_3:checked ~ .wrapper label[for="switch_3"] {
+	background: #ffffff;
+}
+#switch_1:checked ~ .wrapper {
+	background-color: #849d8f;
+	background-image: url(../img/IceCream_1.png);
+}
+#switch_2:checked ~ .wrapper {
+	background-color: #8996a6;
+	background-image: url(../img/IceCream_2.png);
+}
+#switch_3:checked ~ .wrapper {
+	background-color: #9d8b84;
+	background-image: url(../img/IceCream_3.png);
+}
+.slider-controls {
+	position: absolute;
+	bottom: 25px;
+	left: 0;
+}
+.slider-controls label {
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	margin-right: 8px;
+	vertical-align: top;
+	background-color: transparent;
+	border: 2px solid #ffffff;
+	border-radius: 50%;
+	cursor: pointer;
 }
 .breadcrumbs li {
 	display: inline-block;
@@ -133,24 +228,6 @@ h3 {
 }
 .filters {
 	margin-bottom: 40px;
-}
-/*.filters input, .filters label {
-	display: block;
-}
-.slider {
-	background: url(../img/IceCream_1.png) no-repeat;
-	background-size: cover;
-}*/
-.slider h1 {
-	margin: 0;
-}
-.slider a {
-	display: block;
-	width: 280px;
-	margin: 0 auto;
-	text-align: center;
-	margin-bottom: 40px;
-	text-shadow: 2px 2px 5px rgba(160,32,11,0.76);
 }
 .btn {
 	padding: 10px 17px;
@@ -209,24 +286,19 @@ h3 {
 }
 .catalog {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-wrap: wrap;
-	margin-bottom: 40px;
+	margin-bottom: 35px;
 }
 .catalog-item {
 	width: 267px;
-	margin-bottom: 40px;
+	padding: 5px 9px 20px 9px;
 }
 .catalog-item img {
 	border-radius: 50%;
 }
 .catalog-item p {
 	margin-bottom: 0;
-}
-.catalog-item p img {
-	border-radius: 0;
-	position: relative;
-	top: 3px;
 }
 .catalog-item:hover {
 	background-color: rgba(255,255,255,0.3);
@@ -241,6 +313,11 @@ h3 {
 	font-weight: 700;
 	color: #ffffff;
 	margin-top: -65px;
+}
+.price img {
+	border-radius: 0;
+	position: relative;
+	top: 3px;
 }
 .name {
 	text-align: center;
@@ -390,6 +467,17 @@ h3 {
 	height: 430px;
 	margin: 0 auto;
 	background: url(../img/Map.jpg) no-repeat 50% 50%;
+	position: relative;
+}
+.map::after {
+	content: "";
+	position: absolute;
+	width: 218px;
+	height: 142px;
+	top: 138px;
+	left: 266px;
+	background: url(../img/Map_IceCream.png) no-repeat;
+
 }
 .address {
 	background-color: #ffffff;
@@ -404,14 +492,19 @@ h3 {
 	float: right;
 	top: 62px;
 	margin-right: 27.6px;
+	display: flex;
+	flex-direction: column;
 }
 .address p {
 	margin: 0;
 }
+.address p:nth-child(2) {
+	margin-bottom: 30px;
+}
 .address .btn {
 	font-size: 18px;
 	line-height: 24px;
-	position: absolute;
+	margin-top: 30px;
 }
 .bold {
 	font-size: 18px;
@@ -419,7 +512,8 @@ h3 {
 	font-weight: 700;
 }
 .pagination {
-	float: right;
+	display: flex;
+	justify-content: flex-end;
 }
 .pagination li {
 	display: inline-block;
@@ -443,10 +537,7 @@ h3 {
 	border-radius: 50%;
 }
 .footer-navigation {
-	padding-top: 36px;
-	padding-bottom: 29px;
-	margin-left: 180px;/*----------------- пересчитать ------------------*/
-	margin-right: 204px;/*----------------- пересчитать ------------------*/
+	margin: 36px 204px 29px 180px;
 }
 .footer-navigation ul {
 	margin: 0;
@@ -460,16 +551,13 @@ h3 {
 }
 .heart {
 	font-weight: 700;
-	position: relative;
-	padding-left: 20px;
+	list-style: none;
+    background: url("../img/Heart.png") no-repeat;
+    background-position: 0 2px;
+    padding-left: 20px;
 }
-.heart::before {
-	content: "";
-	position: absolute;
-	left: 0;
-	width: 15px;
-	height: 13px;
-	background: url("../img/Heart.png") no-repeat;
+.footer-navigation li:nth-child(2) {
+	padding-left: 20px;
 }
 .design {
 	padding-top: 19px;
